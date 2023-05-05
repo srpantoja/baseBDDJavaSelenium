@@ -70,4 +70,10 @@ public class ConfigFileReader {
         return true;
     }
 
+    public Boolean getHeadlessMode(){
+        String headlessMode = properties.getProperty("headlessMode");
+        if(headlessMode != null) return Boolean.valueOf(headlessMode);
+        return false;
+    }
+
 }

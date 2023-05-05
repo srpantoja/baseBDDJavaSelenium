@@ -56,13 +56,7 @@ public class DriverManager {
                 driver = WebDriverManager.firefoxdriver().create();
                 break;
             case CHROME :
-                WebDriverManager.chromedriver().setup();
-                ChromeOptions chromeOptions = new ChromeOptions();
-                chromeOptions.addArguments("--no-sandbox");
-                chromeOptions.addArguments("--headless");
-                chromeOptions.addArguments("disable-gpu");
-                chromeOptions.addArguments("--lang=pt-br");
-                driver = new ChromeDriver(chromeOptions);
+                driver = createChromeDriver();
                 break;
             case EDGE:
                 driver = WebDriverManager.edgedriver().create();
@@ -76,6 +70,20 @@ public class DriverManager {
         driver.manage().timeouts().implicitlyWait(timeout, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(timeout, TimeUnit.SECONDS);
         return driver;
+    }
+
+    public WebDriver createChromeDriver(){
+        WebDriverManager.chromedriver().setup();
+        ChromeOptions chromeOptions = new ChromeOptions();
+
+        if(FileReaderManager.getInstance().getConfigReader().getHeadlessMode()) {
+            chromeOptions.addArguments("--no-sandbox");
+            chromeOptions.addArguments("--headless");
+            chromeOptions.addArguments("disable-gpu");
+            chromeOptions.addArguments("--lang=pt-br");
+        }
+
+        return driver = new ChromeDriver(chromeOptions);
     }
 
     public void quitDriver() {
