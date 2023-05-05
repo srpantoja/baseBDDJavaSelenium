@@ -12,7 +12,7 @@ This project is an example of test automation using Java with OpenJDK 20, Maven 
 
 - `src/test/java/runners`: Contains the classes that execute the automated tests.
 - `src/test/java/steps`: Contains the classes that define the steps of the automated tests.
-- `src/main/test/resources/features`: Contains the resource files used by Cucumber.
+- `src/test/resources/features`: Contains the resource files used by Cucumber.
 - `src/main/java/cucumber`: Contains the classes that define the Test Context of Cucumber to share information between classes.
 - `src/main/java/data`: Contains the classes that define the data objects used by the tests.
 - `src/main/java/dataProviders`: Contains the classes that provide data for the tests.
