@@ -17,7 +17,7 @@ This project is an example of test automation using Java with OpenJDK 20, Maven 
 - `src/main/java/data`: Contains the classes that define the data objects used by the tests.
 - `src/main/java/dataProviders`: Contains the classes that provide data for the tests.
 - `src/main/java/enums`: Contains the classes that define the enumerations used by the project.
-- `src/main/java/managers`: Contains the classes that manage the instances of the objects used by the tests, example: DriverManager`, `FileReaderManager` and `PageObjectManager`.
+- `src/main/java/managers`: Contains the classes that manage the instances of the objects used by the tests, example: `DriverManager`, `FileReaderManager` and `PageObjectManager`.
 - `src/main/java/pages`: Contains the classes that define the pages of the system that will be automated.
 - `config/Config.properties`: Contains the properties of the project.
 
@@ -38,7 +38,7 @@ We recommend using either IntelliJ IDEA or Eclipse as your IDE.
 
 1. Open the project in your favorite IDE.
 2. Go to the `src/test/java/runners` package.
-3. Run the `TestRunner.java` file as a JUnit test.
+3. Run the `RunCucumberTest.java` file as a JUnit test.
 
 ## 🔧 How to Configure Properties
 
